@@ -1,0 +1,13 @@
+@layer reset, global, chrome, layout;
+
+@layer chrome {
+    nav ul {
+       margin: 0;
+       padding: var(--space-2);
+       list-style: none;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+     @view-transition { navigation: auto; }
+}

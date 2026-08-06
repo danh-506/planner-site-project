@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Planner Site</title>
+
+        <!-- Scripts (defer) -->
+            <!-- main script: planner function-->
+            <script type="module" src="scripts/main.js"></script>
+
+            <!-- secondary script: theme selector -->
+            <script src="scripts/theme-init.js"></script>
+            <script src="scripts/theme-picker.js" defer></script> 
+
+        <!-- Stylesheets -->
+            <!-- Layout : grid, flow layout-->
+            <link rel="stylesheet" href="styles/tokens.css"/>
+            <link rel="stylesheet" href="styles/global.css"/>
+            <link rel="stylesheet" href="styles/site.css"/>
+            <link rel="stylesheet" href="styles/layout.css"/>
+
+            <link rel="stylesheet" href="styles/calendar.css"/>
+
+            <!-- Allow for multiple themes : light,  dark  - themes are manipulated in tokens.css -->
+            
+
+
+    </head>
+
+
+    <!--
+        Custom Elements:
+            main-calendar - holds all events, date, and times, like a traditional calendar holds 
+            all days and times , then when user wants to place an event an event-box element will
+            appear on that date and time (if time is included)
+
+            event-box - will include information such as event date, event time, and extra notes
+            about the event. (will be paired with a dialog element for a more details feature)
+    -->
+    <body>
+        <header>
+            <h1>Planner Site</h1>
+            <p>layout an agenda</p>
+        </header>
+
+        <main>
+            <h2>Calendar</h2>
+            <main-calendar> </main-calendar>
+
+            <noscript>
+                <p>This site does not function without Javascript</p>
+            </noscript>
+        </main>
+
+        <footer>
+            <p>Made by Danny Huynh</p>
+        </footer>
+    </body>
+</html>

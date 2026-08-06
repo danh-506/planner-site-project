@@ -1,0 +1,61 @@
+/* Design tokens only — no layout, no selectors beyond :root. */
+:root {
+  color-scheme: light dark;
+
+  /* color */
+  --ink: #717171;
+  --paper: #fff;
+  --panel: #f2f2f2;
+  --accent: #e30613;
+
+  /* semantic roles — light mode defaults */
+  --bg: var(--paper);
+  --text: var(--ink);
+  --surface: var(--panel);
+
+  /* space */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 2rem;
+  --space-4: 4rem;
+
+  /* border */
+  --border-style: solid;
+  --border-width: 1px;
+  --rule-width: 4px;
+  --underline-width: 2px;
+  --border: var(--border-width) var(--border-style) var(--text);
+  --rule: var(--rule-width) var(--border-style) var(--accent);
+
+  /* type */
+  --text-s: 0.875rem;
+  --text-m: 1rem;
+  --text-l: 1.5rem;
+  --text-xl: 2.25rem;
+
+  /* line length */
+  --measure: 62ch;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111;
+    --text: #f2f2f2;
+    --surface: #1c1c1c;
+  }
+}
+
+:root[data-theme="light"] {
+  --bg: var(--paper);
+  --text: var(--ink);
+  --surface: var(--panel);
+}
+
+:root[data-theme="dark"] {
+  --bg: #111;
+  --text: #f2f2f2;
+  --surface: #1c1c1c;
+}
+
+
+

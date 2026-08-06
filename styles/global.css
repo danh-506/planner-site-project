@@ -1,0 +1,59 @@
+/* Reset, type, and color only — every layout rule lives in each demo's own
+   <style>. Both layers below lose to any unlayered rule, so demo styles
+   always override these without specificity fights. */
+
+@layer reset, base;
+
+@layer reset {
+  * {
+    box-sizing: border-box;
+  }
+
+  body,
+  figure {
+    margin: 0;
+  }
+}
+
+@layer base {
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: var(--text-m);
+    line-height: 1.5;
+  }
+
+  h1,
+  h2 {
+    margin-block: 0 var(--space-2);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h1 { font-size: var(--text-xl); }
+  h2 { font-size: var(--text-l); }
+
+  p {
+    margin-block: 0 var(--space-2);
+  }
+
+  figcaption {
+    font-size: var(--text-s);
+  }
+
+  a {
+    color: var(--text);
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: var(--underline-width);
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 0.9em;
+  }
+}
