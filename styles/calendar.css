@@ -52,5 +52,12 @@
     background-color: var(--bg);
     color: var(--text);
     min-width: 50rem;
+
+    /*input {
+        background-color: var(--accent-color);
+        color: var(--text);
+    }*/
   }
+
+  
 }

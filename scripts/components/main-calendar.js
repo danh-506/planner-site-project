@@ -109,12 +109,13 @@ export class MainCalendar extends HTMLElement {
   #buildDetailDialog(event) {
     const dialog = document.createElement('dialog');
     dialog.id = `event-${event.id}`;
+    dialog.className = 'active-event-dialog'
     dialog.innerHTML = `
-      <button commandfor="${dialog.id}" command="close">X</button>
       <h3>${event.title}</h3>
       ${event.time ? `<p>${event.time}</p>` : ''}
       ${event.notes ? `<p>${event.notes}</p>` : ''}
-      <button type="button" data-action="delete">Delete Event</button>
+      <button type="button" data-action="delete">&#x1F5D1;</button>
+      <button class="close-button" commandfor="${dialog.id}" command="close">X</button>
     `;
 
     dialog.querySelector('[data-action="delete"]').addEventListener('click', () => {

@@ -12,6 +12,7 @@
   --bg: var(--paper);
   --text: var(--ink);
   --surface: var(--panel);
+  --accent-color: var(--panel);
 
   /* space */
   --space-1: 0.5rem;
@@ -55,6 +56,7 @@
   --bg: #111;
   --text: #f2f2f2;
   --surface: #1c1c1c;
+  --accent-color: #555;
 }
 
 
